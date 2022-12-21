@@ -13,10 +13,12 @@ const DrawTerrain = (terrainType: ((c: any) => Color[][])) => (p5: p5Types) => {
 
   for (let i = 0; i < p5.height; i++) {
     for (let j = 0; j < p5.width; j++) {
-      p5.pixels[(i * p5.width + j) * 4] = p5.red(result[i][j]);
-      p5.pixels[(i * p5.width + j) * 4 + 1] = p5.green(result[i][j]);
-      p5.pixels[(i * p5.width + j) * 4 + 2] = p5.blue(result[i][j]);
-      p5.pixels[(i * p5.width + j) * 4 + 3] = 255;
+      const index = (i * p5.width + j) * 4
+
+      p5.pixels[index] = p5.red(result[i][j]);
+      p5.pixels[index + 1] = p5.green(result[i][j]);
+      p5.pixels[index + 2] = p5.blue(result[i][j]);
+      p5.pixels[index + 3] = 255;
     }
   }
 
