@@ -1,13 +1,4 @@
-import dynamic from "next/dynamic";
 import {setup, draw} from "../../components/sketches/Terrain2D/presets/Archipelago";
-import Terrain2DLayout from "../../components/sketches/Terrain2D/Terrain2DLayout";
+import Terrain2DPage from "../../components/sketches/Terrain2D/Terrain2DPage";
 
-const Sketch = dynamic(import('react-p5'), { ssr: false })
-
-const Archipelago = () => (
-    <Terrain2DLayout>
-        <Sketch setup={setup} draw={draw} />
-    </Terrain2DLayout>
-)
-
-export default Archipelago
+export default Terrain2DPage(setup, draw)
