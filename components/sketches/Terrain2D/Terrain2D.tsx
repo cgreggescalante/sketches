@@ -25,4 +25,8 @@ const DrawTerrain = (terrainType: ((c: any) => Color[][])) => (p5: p5Types) => {
   p5.noLoop()
 }
 
-export { setup, DrawTerrain }
+const NoiseFilter = (...filters: Function[]) => {
+  return (source: any) => (width: number, height: number) => filters.reduce((prev, filter) => filter(prev), source(width, height))
+}
+
+export { setup, DrawTerrain, NoiseFilter }
