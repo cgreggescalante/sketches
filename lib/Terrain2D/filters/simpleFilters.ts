@@ -1,4 +1,6 @@
-let SimpleFilter = (filterFunction: Function) => (source: number[][]) => {
+import {CreateFilter, Filter} from "./filters";
+
+let SimpleFilter = (filterFunction: Function): Filter => (source: number[][]) => {
     for (let i = 0; i < source.length; i++) {
         for (let j = 0; j < source[0].length; j++) {
             source[i][j] = filterFunction(source[i][j])
@@ -12,15 +14,15 @@ let ExponentialFilter = (power: number) => SimpleFilter((current: number) => {
     return Math.pow(current, power)
 })
 
-let SteppedFilter = (stepSize: number) => SimpleFilter((current: number) => {
+let SteppedFilter = (stepSize: number) => CreateFilter((current: number) => {
     return current - (current % stepSize)
 })
 
-let FloorFilter = (floor: number) => SimpleFilter((current: number) => {
+let FloorFilter = (floor: number) => CreateFilter((current: number) => {
     return Math.max(current, floor)
 })
 
-let CeilingFilter = (ceiling: number) => SimpleFilter((current: number) => {
+let CeilingFilter = (ceiling: number) => CreateFilter((current: number) => {
     return Math.min(current, ceiling)
 })
 

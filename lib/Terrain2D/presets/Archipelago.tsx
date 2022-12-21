@@ -1,5 +1,5 @@
 import {MetaballsSource, PerlinNoiseSource} from "../sources/source";
-import {MapFilter, MultiplyLayers} from "../filters/complexFilters";
+import {Normalize, MultiplyLayers} from "../filters/filters";
 import {ExponentialFilter} from "../filters/simpleFilters";
 import {TerrainShader} from "../shaders/presets";
 import {DrawTerrain, NoiseFilter, setup} from "../Terrain2D";
@@ -9,9 +9,9 @@ let Archipelago = (sketch: any) => {
 
     let noiseFilter = NoiseFilter(
         MultiplyLayers(metaballLayer),
-        MapFilter(0, 1),
+        Normalize(0, 1),
         ExponentialFilter(2),
-        MapFilter(0, 1)
+        Normalize(0, 1)
     )
 
     let source = PerlinNoiseSource(sketch, 40, 40, 5)
