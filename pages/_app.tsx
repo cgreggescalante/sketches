@@ -1,6 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import 'bootstrap/dist/css/bootstrap.css'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import type { AppProps } from 'next/app'
+import Layout from "../components/layout";
+import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const App = ({ Component, pageProps }: AppProps) => (
+    <>
+      <Head>
+        <title>Sketches</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+)
+
+export default App
