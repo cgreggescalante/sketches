@@ -2,6 +2,5 @@
 
 module.exports = {
   basePath: '/sketches',
-  assetPrefix: '/sketches/',
-  reactStrictMode: true
+  assetPrefix: '/sketches/'
 }

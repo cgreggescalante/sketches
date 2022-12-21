@@ -5,7 +5,7 @@ const Header = () => (
     <Navbar>
         <Nav>
             <NavLink as={Link} href="/">Home</NavLink>
-            <NavLink as={Link} href="/standard">Terrain2D</NavLink>
+            <NavLink as={Link} href="/Terrain2D/standard">Terrain2D</NavLink>
         </Nav>
     </Navbar>
 )

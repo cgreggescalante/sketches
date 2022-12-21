@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import type { AppProps } from 'next/app'
 import Layout from "../components/layout";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 
 const App = ({ Component, pageProps }: AppProps) => (
     <>
