@@ -1,6 +1,7 @@
 import p5Types from "p5";
 import { SketchOptions } from "sketch-utils";
 
+import Page from "../components/page";
 import { ExponentialFilter, MultiplyLayers, Normalize } from "../filters";
 import { TerrainShader } from "../shaders/presets";
 import { MetaballsSource, PerlinNoiseSource } from "../source";
@@ -32,4 +33,4 @@ const draw = DrawTerrain((sketch: p5Types) => {
 
 const Archipelago: SketchOptions = { setup, draw };
 
-export default Archipelago;
+export default Page(Archipelago);

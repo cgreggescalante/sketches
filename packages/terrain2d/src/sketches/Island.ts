@@ -1,6 +1,7 @@
 import p5Types from "p5";
 import { SketchOptions } from "sketch-utils";
 
+import Page from "../components/page";
 import { CircleFilter, MultiplyLayers, Normalize } from "../filters";
 import { TerrainShader } from "../shaders/presets";
 import { PerlinNoiseSource } from "../source";
@@ -28,4 +29,4 @@ const draw = DrawTerrain((sketch: p5Types) => {
 
 const Island: SketchOptions = { setup, draw };
 
-export default Island;
+export default Page(Island);
