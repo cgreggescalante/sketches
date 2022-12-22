@@ -2,6 +2,8 @@
   "name": "site",
   "version": "1.0.0",
   "scripts": {
+    "predeploy": "next export",
+    "deploy": "gh-pages -d out",
     "dev": "next dev",
     "build": "next build",
     "export": "next export -o ../../out",
