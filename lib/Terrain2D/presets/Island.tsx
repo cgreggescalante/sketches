@@ -1,6 +1,6 @@
 import {DrawTerrain, NoiseFilter, setup} from "../Terrain2D";
 import {PerlinNoiseSource} from "../sources/source";
-import {CircleFilter, Normalize, MultiplyLayers} from "../filters/filters";
+import {CircleFilter, Normalize, MultiplyLayers} from "../filters";
 import {TerrainShader} from "../shaders/presets";
 
 const Shader = (sketch: any) => {

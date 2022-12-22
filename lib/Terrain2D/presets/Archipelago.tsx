@@ -1,6 +1,5 @@
 import {MetaballsSource, PerlinNoiseSource} from "../sources/source";
-import {Normalize, MultiplyLayers} from "../filters/filters";
-import {ExponentialFilter} from "../filters/simpleFilters";
+import {Normalize, MultiplyLayers, ExponentialFilter} from "../filters";
 import {TerrainShader} from "../shaders/presets";
 import {DrawTerrain, NoiseFilter, setup} from "../Terrain2D";
 
