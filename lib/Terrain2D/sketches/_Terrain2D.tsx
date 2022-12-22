@@ -1,5 +1,6 @@
 import p5Types from "p5";
 import { Color } from "p5"
+import {Filter} from "../filters";
 
 
 const setup = (p5: p5Types, canvasParentRef: Element) => {
@@ -27,7 +28,7 @@ const DrawTerrain = (terrainType: ((c: any) => Color[][])) => (p5: p5Types) => {
   p5.noLoop()
 }
 
-const NoiseFilter = (...filters: Function[]) => {
+const NoiseFilter = (...filters: Filter[]) => {
   return (source: any) => (width: number, height: number) => filters.reduce((prev, filter) => filter(prev), source(width, height))
 }
 

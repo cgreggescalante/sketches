@@ -1,7 +1,7 @@
 import {Nav, Navbar, NavLink} from "react-bootstrap";
 import Link from "next/link";
 
-const Terrain2DHeader = () => (
+const Header = () => (
     <Navbar>
         <Nav>
             <NavLink as={Link} href="/Terrain2D/standard">Standard</NavLink>
@@ -11,4 +11,4 @@ const Terrain2DHeader = () => (
     </Navbar>
 )
 
-export default Terrain2DHeader
+export default Header

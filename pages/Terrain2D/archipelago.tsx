@@ -1,4 +1,4 @@
-import {setup, draw} from "../../lib/Terrain2D/presets/Archipelago";
-import Terrain2DPage from "../../components/sketches/Terrain2D/Terrain2DPage";
+import Archipelago from "../../lib/Terrain2D/sketches/Archipelago";
+import Page from "../../components/sketches/Terrain2D/page";
 
-export default Terrain2DPage(setup, draw)
+export default Page(Archipelago)

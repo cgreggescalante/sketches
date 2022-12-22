@@ -1,9 +1,12 @@
-import {MetaballsSource, PerlinNoiseSource} from "../sources/source";
+import {MetaballsSource, PerlinNoiseSource} from "../source";
 import {Normalize, MultiplyLayers, ExponentialFilter} from "../filters";
 import {TerrainShader} from "../shaders/presets";
-import {DrawTerrain, NoiseFilter, setup} from "../Terrain2D";
+import {DrawTerrain, NoiseFilter, setup} from "./_Terrain2D";
+import p5Types from "p5";
+import {SketchOptions} from "../../sketchOptions";
 
-let Archipelago = (sketch: any) => {
+
+const draw = DrawTerrain((sketch: p5Types) => {
     let metaballLayer = MetaballsSource(sketch, 10, sketch.width, sketch.height, 200, .2)(sketch.width, sketch.height)
 
     let noiseFilter = NoiseFilter(
@@ -18,8 +21,8 @@ let Archipelago = (sketch: any) => {
     let heightMap = noiseFilter(source)(sketch.width, sketch.height)
 
     return TerrainShader(sketch)(heightMap)
-}
+})
 
-const draw = DrawTerrain(Archipelago)
+const Archipelago: SketchOptions = { setup, draw }
 
-export { setup, draw }
+export default Archipelago

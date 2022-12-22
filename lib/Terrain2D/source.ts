@@ -17,7 +17,6 @@ const PerlinNoiseSource = (sketch: p5Types, xScale: number, yScale: number, laye
     })
 }
 
-
 const MetaballsSource = (sketch: p5Types, metaballCount: number, width: number, height: number, radius: number, power: number) => {
     const metaballs: number[][] = []
 

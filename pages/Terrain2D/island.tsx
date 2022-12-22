@@ -1,4 +1,4 @@
-import {setup, draw} from "../../lib/Terrain2D/presets/Island";
-import Terrain2DPage from "../../components/sketches/Terrain2D/Terrain2DPage";
+import Island from "../../lib/Terrain2D/sketches/Island";
+import Page from "../../components/sketches/Terrain2D/page";
 
-export default Terrain2DPage(setup, draw)
+export default Page(Island)

@@ -1,16 +1,18 @@
-import * as p5 from "p5";
+import p5Types, {Color} from "p5";
 
-let GradientShader = (skt: any, start: p5.Color, finish: p5.Color, startValue=0, finishValue=1) => Shader((height: number) => {
-    let normalized = (height - startValue) / finishValue
-    let r = skt.red(start) + normalized * (skt.red(finish) - skt.red(start))
-    let g = skt.green(start) + normalized * (skt.green(finish) - skt.green(start))
-    let b = skt.blue(start) + normalized * (skt.blue(finish) - skt.blue(start))
+let GradientShader = (p5: p5Types, start: Color, finish: Color, startValue=0, finishValue=1) =>
+    Shader((height: number) => {
+        let normalized = (height - startValue) / finishValue
 
-    return skt.color(r, g, b)
-})
+        let r = p5.red(start) + normalized * (p5.red(finish) - p5.red(start))
+        let g = p5.green(start) + normalized * (p5.green(finish) - p5.green(start))
+        let b = p5.blue(start) + normalized * (p5.blue(finish) - p5.blue(start))
+
+        return p5.color(r, g, b)
+    })
 
 let Shader = (shaderFunction: Function) => (heightMap: number[][]) => {
-    let result: p5.Color[][] = []
+    let result: Color[][] = []
 
     for (let i = 0; i < heightMap.length; i++) {
         result.push([])
