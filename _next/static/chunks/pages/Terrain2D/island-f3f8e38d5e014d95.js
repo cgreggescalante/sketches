@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[226],{4028:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/Terrain2D/island",function(){return _(7468)}])},7468:function(n,u,_){"use strict";_.r(u);var i=_(9270),t=_(7553);u.default=(0,t.Z)(i.Island)}},function(n){n.O(0,[859,774,888,179],function(){return n(n.s=4028)}),_N_E=n.O()}]);
