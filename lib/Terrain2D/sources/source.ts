@@ -6,13 +6,12 @@ let PerlinNoiseSource = (sketch: any, xScale: number, yScale: number, layers=1) 
     }
 
     return Source((x: number, y: number) => {
-        let value = 0;
-
-        for (let i = 1; i <= layers; i++) {
-            value += sketch.noise(offsets[i - 1][0] + x / (xScale * (1 / i)), offsets[i - 1][1] + y / (yScale * (1 / i))) / i
-        }
-
-        return value
+        return offsets.reduce((value, offset, i) =>
+            value + sketch.noise(
+                offset[0] + x / (xScale / (1 + i)),
+                offset[1] + y / (yScale / (1 + i))) / (i + 1),
+            0
+        )
     })
 }
 
