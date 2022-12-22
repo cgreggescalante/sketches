@@ -1,5 +1,7 @@
-let PerlinNoiseSource = (sketch: any, xScale: number, yScale: number, layers=1) => {
-    let offsets: number[][] = []
+import p5Types from "p5";
+
+const PerlinNoiseSource = (sketch: p5Types, xScale: number, yScale: number, layers=1) => {
+    const offsets: number[][] = []
 
     for (let i = 0; i < layers; i++) {
         offsets.push([Math.random() * 100000, Math.random() * 100000])
@@ -16,25 +18,20 @@ let PerlinNoiseSource = (sketch: any, xScale: number, yScale: number, layers=1) 
 }
 
 
-let MetaballsSource = (sketch: any, metaballCount: number, width: number, height: number, radius: number, power: number) => {
-    let metaballs: number[][] = []
+const MetaballsSource = (sketch: p5Types, metaballCount: number, width: number, height: number, radius: number, power: number) => {
+    const metaballs: number[][] = []
 
     for (let i = 0; i < metaballCount; i++) {
         metaballs.push([sketch.random(0, width), sketch.random(0, height)])
     }
 
     return Source((x: number, y: number) => {
-        let maxF = 0;
-
-        for (let i = 0; i < metaballCount; i++) {
-            let d = Math.sqrt((x - metaballs[i][0]) ** 2 + (y - metaballs[i][1]) ** 2)
+        return metaballs.reduce((maxF, metaball) => {
+            let d = Math.sqrt((x - metaball[0]) ** 2 + (y - metaball[1]) ** 2)
             let f = -1 / (1 + Math.exp(-(10 * power / radius) * (d - radius))) + 1
-            if (f > maxF) {
-                maxF = f;
-            }
-        }
 
-        return maxF
+            return f > maxF ? f : maxF
+        }, 0)
     })
 }
 
