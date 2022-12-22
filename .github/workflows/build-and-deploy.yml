@@ -20,8 +20,8 @@ jobs:
       - name: Build
         run: |
           npm ci
-          npm run build
-          npm run export
+          npx nx run site:build
+          npx nx run site:export
           touch out/.nojekyll
 
       - name: Deploy
