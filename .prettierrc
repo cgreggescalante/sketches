@@ -1,3 +1,9 @@
 {
-  "singleQuote": true
+  "trailingComma": "none",
+  "importOrder": [
+    "^components/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

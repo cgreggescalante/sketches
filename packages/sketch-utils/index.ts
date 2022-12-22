@@ -1,3 +1,3 @@
-import { SketchOptions } from './src/sketchOptions';
+import { SketchOptions } from "./src/sketchOptions";
 
 export type { SketchOptions };

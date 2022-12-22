@@ -1,18 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.css'
-
-import type { AppProps } from 'next/app'
-import Layout from "../components/layout";
+import "bootstrap/dist/css/bootstrap.css";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 
-const App = ({ Component, pageProps }: AppProps) => (
-    <>
-      <Head>
-        <title>Sketches</title>
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
-)
+import Layout from "../components/layout";
 
-export default App
+const App = ({ Component, pageProps }: AppProps) => (
+  <>
+    <Head>
+      <title>Sketches</title>
+    </Head>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </>
+);
+
+export default App;
