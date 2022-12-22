@@ -1,6 +1,6 @@
 import p5Types, { Color } from "p5";
 
-import { Filter } from "../filters";
+import { Filter } from "./filters";
 
 const setup = (p5: p5Types, canvas: Element) => {
   p5.pixelDensity(1);

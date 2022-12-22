@@ -1,5 +1,5 @@
-import Archipelago from "./src/sketches/Archipelago";
-import Island from "./src/sketches/Island";
-import Standard from "./src/sketches/Standard";
+import Archipelago from "./src/pages/Archipelago";
+import Island from "./src/pages/Island";
+import Standard from "./src/pages/Standard";
 
 export { Archipelago, Island, Standard };

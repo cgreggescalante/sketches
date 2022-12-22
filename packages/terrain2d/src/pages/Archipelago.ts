@@ -5,7 +5,7 @@ import Page from "../components/page";
 import { ExponentialFilter, MultiplyLayers, Normalize } from "../filters";
 import { TerrainShader } from "../shaders/presets";
 import { MetaballsSource, PerlinNoiseSource } from "../source";
-import { DrawTerrain, NoiseFilter, setup } from "./_Terrain2D";
+import { DrawTerrain, NoiseFilter, setup } from "../utils";
 
 const draw = DrawTerrain((sketch: p5Types) => {
   let metaballLayer = MetaballsSource(
