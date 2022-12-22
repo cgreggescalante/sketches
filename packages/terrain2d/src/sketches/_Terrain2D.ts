@@ -2,8 +2,9 @@ import p5Types, { Color } from "p5";
 
 import { Filter } from "../filters";
 
-const setup = (p5: p5Types, canvasParentRef: Element) => {
-  p5.createCanvas(1000, 1000).parent(canvasParentRef);
+const setup = (p5: p5Types, canvas: Element) => {
+  p5.pixelDensity(1);
+  p5.createCanvas(1000, 1000).parent(canvas);
 };
 
 const DrawTerrain = (terrainType: (c: any) => Color[][]) => (p5: p5Types) => {
