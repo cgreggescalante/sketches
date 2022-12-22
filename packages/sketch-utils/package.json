@@ -4,6 +4,6 @@
   "main": "dist/index.js",
   "dependencies": {},
   "scripts": {
-    "build": "tsc index.ts --esModuleInterop --outDir dist"
+    "build": "tsc index.ts --esModuleInterop --jsx react-jsx --outDir dist"
   }
 }
