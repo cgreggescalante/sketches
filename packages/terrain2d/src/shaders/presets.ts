@@ -2,7 +2,8 @@ import {GradientLayer, LayeredShader, SimpleLayer} from "./layered";
 import p5Types from "p5";
 
 let TerrainShader = (p5: p5Types) => LayeredShader(
-    [
+  p5,
+  [
         // Water
         [.21, GradientLayer(p5, 0, .1, p5.color(0, 50, 90), p5.color(0, 104, 196))],
         // Sand

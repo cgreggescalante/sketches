@@ -3,8 +3,7 @@ import {PerlinNoiseSource} from "../source";
 import {CircleFilter, Normalize, MultiplyLayers} from "../filters";
 import {TerrainShader} from "../shaders/presets";
 import p5Types from "p5";
-import {SketchOptions} from "../../sketchOptions";
-
+import { SketchOptions } from "sketch-utils";
 
 const draw = DrawTerrain((sketch: p5Types) => {
     let perlinLayer = PerlinNoiseSource(sketch, 160, 160)(sketch.width, sketch.height)

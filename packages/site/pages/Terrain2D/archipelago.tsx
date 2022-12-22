@@ -1,4 +1,4 @@
-import Archipelago from "../../lib/Terrain2D/sketches/Archipelago";
+import { Archipelago } from "terrain2d";
 import Page from "../../components/sketches/Terrain2D/page";
 
 export default Page(Archipelago)

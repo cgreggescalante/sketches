@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Layout from "./layout";
-import {SketchOptions} from "../../../lib/sketchOptions";
+import {SketchOptions} from "../../../packages/sketch-utils";
 
 const Sketch = dynamic(import('react-p5'), { ssr: false })
 

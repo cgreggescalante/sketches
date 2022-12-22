@@ -1,0 +1,9 @@
+{
+  "name": "sketch-utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {},
+  "scripts": {
+    "build": "tsc index.ts --esModuleInterop --outDir dist"
+  }
+}

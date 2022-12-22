@@ -1,14 +1,14 @@
 import {Shader} from "./shader";
 import p5Types, {Color} from "p5";
 
-let LayeredShader = (layers: any[]) => Shader((height: number) => {
+let LayeredShader = (p5: p5Types, layers: any[]) => Shader((height: number) => {
     for (let i = 0; i < layers.length; i++) {
         if (layers[i][0] >= height) {
             return layers[i][1](height)
         }
     }
 
-    return color(0)
+    return p5.color(0)
 })
 
 let Layer = (layerFunction: Function, minHeight=0, maxHeight=1) => (height: number) => {

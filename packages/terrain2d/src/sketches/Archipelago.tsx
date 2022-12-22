@@ -3,8 +3,7 @@ import {Normalize, MultiplyLayers, ExponentialFilter} from "../filters";
 import {TerrainShader} from "../shaders/presets";
 import {DrawTerrain, NoiseFilter, setup} from "./_Terrain2D";
 import p5Types from "p5";
-import {SketchOptions} from "../../sketchOptions";
-
+import { SketchOptions } from "sketch-utils";
 
 const draw = DrawTerrain((sketch: p5Types) => {
     let metaballLayer = MetaballsSource(sketch, 10, sketch.width, sketch.height, 200, .2)(sketch.width, sketch.height)

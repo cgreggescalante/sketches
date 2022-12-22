@@ -1,0 +1,11 @@
+{
+  "name": "terrain2d",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "sketch-utils": "*"
+  },
+  "scripts": {
+    "build": "tsc index.ts --esModuleInterop --jsx preserve --outDir dist"
+  }
+}
