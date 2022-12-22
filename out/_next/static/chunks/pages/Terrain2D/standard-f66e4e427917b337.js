@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[782],{823:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/Terrain2D/standard",function(){return t(1320)}])},1320:function(n,u,t){"use strict";t.r(u);var _=t(9270),r=t(7553);u.default=(0,r.Z)(_.Standard)}},function(n){n.O(0,[859,774,888,179],function(){return n(n.s=823)}),_N_E=n.O()}]);
